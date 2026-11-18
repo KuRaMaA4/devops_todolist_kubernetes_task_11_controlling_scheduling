@@ -1,4 +1,7 @@
 #!/bin/bash
+# Create kind cluster from cluster.yml
+kind create cluster --config cluster.yml
+
 # Taint nodes labeled app=mysql
 kubectl taint nodes -l app=mysql app=mysql:NoSchedule --overwrite
 kubectl apply -f .infrastructure/mysql/ns.yml

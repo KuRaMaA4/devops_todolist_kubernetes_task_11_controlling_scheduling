@@ -34,7 +34,9 @@ spec:
                   - key: app
                     operator: In
                     values:
-                      - todoapp
+                      - mysql
+              namespaces:
+                - mysql
               topologyKey: "kubernetes.io/hostname"
       containers:
       - name: todoapp
